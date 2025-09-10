@@ -1,47 +1,45 @@
-import { motion } from "framer-motion";
+import useDarkMode from "../hooks/useDarkMode";
+import { Sun, Moon } from "lucide-react";
 
 export default function Navbar() {
-    return (
-        <motion.nav
-            initial={{ y: -100 }}
-            animate={{ y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="fixed top-0 left-0 w-full bg-white shadow-md z-50"
-        >
-            <div className="container mx-auto flex justify-between items-center py-4 px-6">
-                {/* Logo o Nombre */}
-                <a href="#hero" className="text-2xl font-bold text-gray-800">
-                    MiPortfolio
-                </a>
+    const [darkMode, setDarkMode] = useDarkMode();
 
-                {/* Links */}
-                <ul className="flex space-x-6 text-gray-600 font-medium">
-                    <li>
-                        <a
-                            href="#about"
-                            className="hover:text-blue-500 transition-colors duration-300"
-                        >
-                            Sobre mí
-                        </a>
-                    </li>
-                    <li>
-                        <a
-                            href="#projects"
-                            className="hover:text-blue-500 transition-colors duration-300"
-                        >
-                            Proyectos
-                        </a>
-                    </li>
-                    <li>
-                        <a
-                            href="#contact"
-                            className="hover:text-blue-500 transition-colors duration-300"
-                        >
-                            Contacto
-                        </a>
-                    </li>
-                </ul>
+    return (
+        <nav className="fixed w-full bg-white dark:bg-gray-900 shadow-md z-50">
+            <div className="container mx-auto px-6 py-4 flex justify-between items-center">
+                <a
+                    href="#hero"
+                    className="text-xl font-bold text-gray-800 dark:text-white"
+                >
+                    Juan Catena
+                </a>
+                <div className="flex items-center gap-6">
+                    <a
+                        href="#about"
+                        className="text-gray-600 dark:text-gray-300 hover:text-blue-600"
+                    >
+                        Sobre mí
+                    </a>
+                    <a
+                        href="#projects"
+                        className="text-gray-600 dark:text-gray-300 hover:text-blue-600"
+                    >
+                        Proyectos
+                    </a>
+                    <a
+                        href="#contact"
+                        className="text-gray-600 dark:text-gray-300 hover:text-blue-600"
+                    >
+                        Contacto
+                    </a>
+                    <button
+                        onClick={() => setDarkMode(!darkMode)}
+                        className="p-2 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 transition"
+                    >
+                        {darkMode ? <Sun size={20} /> : <Moon size={20} />}
+                    </button>
+                </div>
             </div>
-        </motion.nav>
+        </nav>
     );
 }

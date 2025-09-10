@@ -3,10 +3,10 @@ import { Mail, Github, Linkedin } from "lucide-react";
 
 export default function Contact() {
     return (
-        <section id="contact" className="py-20 bg-white px-6">
+        <section id="contact" className="py-20 bg-white dark:bg-gray-900 px-6">
             <div className="container mx-auto text-center max-w-3xl">
                 <motion.h2
-                    className="text-3xl font-bold text-gray-800 mb-6"
+                    className="text-3xl font-bold text-gray-800 dark:text-white mb-6"
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
@@ -16,7 +16,7 @@ export default function Contact() {
                 </motion.h2>
 
                 <motion.p
-                    className="text-lg text-gray-600 mb-8"
+                    className="text-lg text-gray-600 dark:text-gray-300 mb-8"
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
                     viewport={{ once: true }}
@@ -35,7 +35,7 @@ export default function Contact() {
                 >
                     <a
                         href="mailto:juancatena91@gmail.com"
-                        className="flex items-center gap-2 text-gray-700 hover:text-blue-600 transition"
+                        className="flex items-center gap-2 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition"
                     >
                         <Mail size={22} /> Email
                     </a>
@@ -43,7 +43,7 @@ export default function Contact() {
                         href="https://github.com/J-Catena"
                         target="_blank"
                         rel="noreferrer"
-                        className="flex items-center gap-2 text-gray-700 hover:text-blue-600 transition"
+                        className="flex items-center gap-2 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition"
                     >
                         <Github size={22} /> GitHub
                     </a>
@@ -51,7 +51,7 @@ export default function Contact() {
                         href="https://www.linkedin.com/in/juan-catena-marin"
                         target="_blank"
                         rel="noreferrer"
-                        className="flex items-center gap-2 text-gray-700 hover:text-blue-600 transition"
+                        className="flex items-center gap-2 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition"
                     >
                         <Linkedin size={22} /> LinkedIn
                     </a>

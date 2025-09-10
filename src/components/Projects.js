@@ -9,17 +9,16 @@ export default function Projects() {
             demo: "https://jcatena.pythonanywhere.com",
             github: "https://github.com/J-Catena/Web-Stihl",
         },
-        
-       
+
         // AMPLIAR CON MAS PROYECTOS AQUI
-
-
     ];
 
     return (
-        <section id="projects" className="py-20 bg-gray-100">
+        <section id="projects" className="py-20 bg-gray-100 dark:bg-gray-900">
             <div className="container mx-auto px-6">
-                <h2 className="text-3xl font-bold text-center mb-10">Proyectos</h2>
+                <h2 className="text-3xl font-bold text-center mb-10 text-gray-800 dark:text-white">
+                    Proyectos
+                </h2>
 
                 <div
                     className={`grid gap-8 ${projects.length > 1 ? "md:grid-cols-2" : "max-w-md mx-auto"
@@ -28,7 +27,7 @@ export default function Projects() {
                     {projects.map((project, index) => (
                         <motion.div
                             key={index}
-                            className="bg-white shadow-lg rounded-lg overflow-hidden"
+                            className="bg-white dark:bg-gray-800 shadow-lg rounded-lg overflow-hidden"
                             initial={{ opacity: 0, y: 50 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
@@ -41,15 +40,19 @@ export default function Projects() {
                                 className="w-full h-48 object-cover"
                             />
                             <div className="p-6">
-                                <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
-                                <p className="mb-4 text-gray-600">{project.desc}</p>
+                                <h3 className="text-xl font-semibold mb-2 text-gray-800 dark:text-white">
+                                    {project.title}
+                                </h3>
+                                <p className="mb-4 text-gray-600 dark:text-gray-300">
+                                    {project.desc}
+                                </p>
                                 <div className="flex space-x-4">
                                     {project.demo && (
                                         <a
                                             href={project.demo}
                                             target="_blank"
                                             rel="noreferrer"
-                                            className="text-blue-600 hover:underline"
+                                            className="text-blue-600 dark:text-blue-400 hover:underline"
                                         >
                                             Demo
                                         </a>
@@ -59,7 +62,7 @@ export default function Projects() {
                                             href={project.github}
                                             target="_blank"
                                             rel="noreferrer"
-                                            className="text-gray-600 hover:underline"
+                                            className="text-gray-600 dark:text-gray-300 hover:underline"
                                         >
                                             GitHub
                                         </a>
