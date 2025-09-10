@@ -33,15 +33,22 @@ export default function About() {
                 >
                     Soy un{" "}
                     <span className="font-semibold text-blue-600 dark:text-blue-400">
-                        desarrollador web frontend junior
+                        desarrollador Full Stack Junior
                     </span>{" "}
-                    con gran interés en aprender, crecer y aportar valor en proyectos modernos.
-                    Me apasiona crear aplicaciones{" "}
+                    con formación en{" "}
+                    <span className="font-semibold">Frontend (React, TailwindCSS, JavaScript)</span>{" "}
+                    y{" "}
+                    <span className="font-semibold">Backend (Python, Django)</span>.
+                    Me motiva seguir aprendiendo y aportar en proyectos modernos, creando{" "}
                     <span className="font-semibold text-gray-800 dark:text-gray-100">
-                        rápidas, accesibles y fáciles de usar
+                        aplicaciones rápidas, accesibles y fáciles de usar
                     </span>
-                    , tanto en frontend como en backend.
+                    , con código limpio y buenas prácticas.
+                    Estoy en constante evolución y abierto a nuevos retos, ya sea en{" "}
+                    <span className="font-semibold">frontend</span> o{" "}
+                    <span className="font-semibold">backend</span>, con el objetivo de seguir mejorando cada día como profesional.
                 </motion.p>
+
 
                 {/* Habilidades */}
                 <motion.div

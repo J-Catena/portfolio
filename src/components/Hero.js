@@ -58,11 +58,13 @@ export default function Hero() {
                 className="flex-1 flex justify-center mt-10 md:mt-0"
             >
                 <img
-                    src="https://via.placeholder.com/250"
-                    alt="Mi Foto"
-                    className="w-56 h-56 md:w-72 md:h-72 rounded-full object-cover shadow-lg 
-                     border-4 border-white dark:border-gray-700"
+                    src="https://ui-avatars.com/api/?name=Juan+Catena&size=256&background=0D8ABC&color=fff"
+                    alt="Avatar"
+                    className="w-56 h-56 md:w-72 md:h-72 rounded-full object-cover shadow-lg border-4 border-white dark:border-gray-700"
                 />
+
+
+
             </motion.div>
         </section>
     );
