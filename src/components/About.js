@@ -2,20 +2,45 @@ import { motion } from "framer-motion";
 
 export default function About() {
     const skills = [
-        { name: "HTML5", color: "bg-orange-100 text-orange-600 dark:bg-orange-600 dark:text-white" },
-        { name: "CSS3", color: "bg-blue-100 text-blue-600 dark:bg-blue-600 dark:text-white" },
-        { name: "JavaScript", color: "bg-yellow-100 text-yellow-600 dark:bg-yellow-500 dark:text-black" },
-        { name: "TailwindCSS", color: "bg-teal-100 text-teal-600 dark:bg-teal-600 dark:text-white" },
-        { name: "Python", color: "bg-green-100 text-green-600 dark:bg-green-600 dark:text-white" },
-        { name: "Django", color: "bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-white" },
-        { name: "Git/GitHub", color: "bg-black text-white dark:bg-gray-900 dark:text-gray-200" },
+        {
+            name: "HTML5",
+            icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
+        },
+        {
+            name: "CSS3",
+            icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
+        },
+        {
+            name: "JavaScript",
+            icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
+        },
+        {
+            name: "TailwindCSS",
+            icon: "https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg",
+        },
+        {
+            name: "Python",
+            icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
+        },
+        {
+            name: "Django",
+            icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg",
+        },
+        {
+            name: "GitHub",
+            icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
+        },
+        {
+            name: "Framer Motion",
+            icon: "https://seeklogo.com/images/F/framer-motion-logo-DA1E33CAA1-seeklogo.com.png",
+        },
     ];
 
     return (
-        <section id="about" className="py-20 bg-gray-50 dark:bg-gray-800 px-6">
-            <div className="container mx-auto text-center max-w-3xl">
+        <section id="about" className="py-16 px-4 sm:px-6 md:px-12 bg-gray-50 dark:bg-gray-800">
+            <div className="max-w-3xl mx-auto text-center">
                 <motion.h2
-                    className="text-3xl font-bold text-gray-800 dark:text-white mb-6"
+                    className="text-3xl sm:text-4xl font-bold text-gray-800 dark:text-white mb-6"
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
@@ -25,7 +50,7 @@ export default function About() {
                 </motion.h2>
 
                 <motion.p
-                    className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed"
+                    className="text-base sm:text-lg text-gray-600 dark:text-gray-300 leading-relaxed"
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
                     viewport={{ once: true }}
@@ -33,40 +58,37 @@ export default function About() {
                 >
                     Soy un{" "}
                     <span className="font-semibold text-blue-600 dark:text-blue-400">
-                        desarrollador Full Stack Junior
+                        desarrollador Full Stack
                     </span>{" "}
                     con formación en{" "}
-                    <span className="font-semibold">Frontend (React, TailwindCSS, JavaScript)</span>{" "}
-                    y{" "}
+                    <span className="font-semibold">Frontend (React, TailwindCSS, JavaScript)</span> y{" "}
                     <span className="font-semibold">Backend (Python, Django)</span>.
                     Me motiva seguir aprendiendo y aportar en proyectos modernos, creando{" "}
                     <span className="font-semibold text-gray-800 dark:text-gray-100">
                         aplicaciones rápidas, accesibles y fáciles de usar
-                    </span>
-                    , con código limpio y buenas prácticas.
-                    Estoy en constante evolución y abierto a nuevos retos, ya sea en{" "}
+                    </span>, con código limpio y buenas prácticas. Estoy en constante evolución y
+                    abierto a nuevos retos, ya sea en{" "}
                     <span className="font-semibold">frontend</span> o{" "}
-                    <span className="font-semibold">backend</span>, con el objetivo de seguir mejorando cada día como profesional.
+                    <span className="font-semibold">backend</span>, con el objetivo de seguir
+                    mejorando cada día como profesional.
                 </motion.p>
 
-
-                {/* Habilidades */}
+                {/* Habilidades / tecnologías */}
                 <motion.div
-                    className="flex flex-wrap justify-center gap-3 mt-8"
+                    className="flex justify-center flex-wrap gap-4 mt-10"
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
                     viewport={{ once: true }}
-                    transition={{ delay: 0.6, duration: 0.8 }}
+                    transition={{ delay: 0.4, duration: 0.8 }}
                 >
                     {skills.map((skill, index) => (
-                        <motion.span
+                        <img
                             key={index}
-                            className={`${skill.color} px-4 py-2 rounded-full text-sm font-medium shadow-sm cursor-pointer`}
-                            whileHover={{ scale: 1.1 }}
-                            transition={{ type: "spring", stiffness: 300 }}
-                        >
-                            {skill.name}
-                        </motion.span>
+                            src={skill.icon}
+                            alt={skill.name}
+                            title={skill.name}
+                            className="w-10 h-10 transition-transform hover:scale-110"
+                        />
                     ))}
                 </motion.div>
             </div>

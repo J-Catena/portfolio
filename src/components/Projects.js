@@ -9,50 +9,57 @@ export default function Projects() {
             demo: "https://jcatena.pythonanywhere.com",
             github: "https://github.com/J-Catena/Web-Stihl",
         },
-
-        // AMPLIAR CON MAS PROYECTOS AQUI
+        // Más proyectos...
     ];
 
     return (
-        <section id="projects" className="py-20 bg-gray-100 dark:bg-gray-900">
-            <div className="container mx-auto px-6">
-                <h2 className="text-3xl font-bold text-center mb-10 text-gray-800 dark:text-white">
+        <section
+            id="projects"
+            className="py-20 bg-gray-100 dark:bg-gray-900 px-4 sm:px-6 md:px-12"
+        >
+            <div className="max-w-6xl mx-auto">
+                <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12 text-gray-800 dark:text-white">
                     Proyectos
                 </h2>
 
                 <div
-                    className={`grid gap-8 ${projects.length > 1 ? "md:grid-cols-2" : "max-w-md mx-auto"
+                    className={`grid gap-10 ${projects.length > 1 ? "md:grid-cols-2" : "max-w-xl mx-auto"
                         }`}
                 >
                     {projects.map((project, index) => (
                         <motion.div
                             key={index}
-                            className="bg-white dark:bg-gray-800 shadow-lg rounded-lg overflow-hidden"
+                            className="rounded-xl overflow-hidden bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 shadow-sm hover:shadow-lg transform transition duration-300 hover:scale-[1.015]"
                             initial={{ opacity: 0, y: 50 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.8, delay: index * 0.2 }}
-                            whileHover={{ scale: 1.03 }}
                         >
-                            <img
-                                src={project.img}
-                                alt={project.title}
-                                className="w-full h-48 object-cover"
-                            />
+                            {/* Imagen */}
+                            <div className="w-full h-56 sm:h-64 md:h-72 overflow-hidden bg-gray-100 dark:bg-gray-700">
+                                <img
+                                    src={project.img}
+                                    alt={project.title}
+                                    className="w-full h-full object-contain object-center p-4"
+                                />
+                            </div>
+
+                            {/* Contenido */}
                             <div className="p-6">
-                                <h3 className="text-xl font-semibold mb-2 text-gray-800 dark:text-white">
+                                <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-3">
                                     {project.title}
                                 </h3>
-                                <p className="mb-4 text-gray-600 dark:text-gray-300">
+                                <p className="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed text-sm">
                                     {project.desc}
                                 </p>
-                                <div className="flex space-x-4">
+
+                                <div className="flex flex-wrap gap-4">
                                     {project.demo && (
                                         <a
                                             href={project.demo}
                                             target="_blank"
                                             rel="noreferrer"
-                                            className="text-blue-600 dark:text-blue-400 hover:underline"
+                                            className="px-4 py-2 bg-blue-600 text-white rounded-full text-sm hover:bg-blue-700 transition dark:bg-blue-500 dark:hover:bg-blue-600"
                                         >
                                             Demo
                                         </a>
@@ -62,7 +69,7 @@ export default function Projects() {
                                             href={project.github}
                                             target="_blank"
                                             rel="noreferrer"
-                                            className="text-gray-600 dark:text-gray-300 hover:underline"
+                                            className="px-4 py-2 border border-gray-400 text-gray-700 dark:border-gray-500 dark:text-gray-300 rounded-full text-sm hover:bg-gray-100 dark:hover:bg-gray-700 transition"
                                         >
                                             GitHub
                                         </a>

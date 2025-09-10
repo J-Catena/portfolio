@@ -3,10 +3,10 @@ import { Mail, Github, Linkedin } from "lucide-react";
 
 export default function Contact() {
     return (
-        <section id="contact" className="py-20 bg-white dark:bg-gray-900 px-6">
-            <div className="container mx-auto text-center max-w-3xl">
+        <section id="contact" className="py-20 bg-white dark:bg-gray-900 px-4 sm:px-6">
+            <div className="max-w-3xl mx-auto text-center">
                 <motion.h2
-                    className="text-3xl font-bold text-gray-800 dark:text-white mb-6"
+                    className="text-3xl sm:text-4xl font-bold text-gray-800 dark:text-white mb-6"
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
@@ -16,7 +16,7 @@ export default function Contact() {
                 </motion.h2>
 
                 <motion.p
-                    className="text-lg text-gray-600 dark:text-gray-300 mb-8"
+                    className="text-base sm:text-lg text-gray-600 dark:text-gray-300 mb-10"
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
                     viewport={{ once: true }}
@@ -27,7 +27,7 @@ export default function Contact() {
                 </motion.p>
 
                 <motion.div
-                    className="flex justify-center gap-8 text-lg font-medium"
+                    className="flex flex-col md:flex-row justify-center items-center gap-y-6 md:gap-y-0 md:gap-x-10 text-base sm:text-lg font-medium"
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
                     viewport={{ once: true }}
