@@ -5,11 +5,11 @@ export default function Projects() {
         {
             title: "Web Stihl",
             desc: "Sitio web corporativo hecho con Django, Python y TailwindCSS. Actualmente desplegado en producción en PythonAnywhere.",
-            img: "/images/tienda_jorge_stihl.png",
+            img: "/images/foto-proyecto-stihl.png",
             demo: "https://jcatena.pythonanywhere.com",
             github: "https://github.com/J-Catena/Web-Stihl",
         },
-        // Más proyectos...
+        // Puedes añadir más proyectos aquí...
     ];
 
     return (
@@ -22,10 +22,7 @@ export default function Projects() {
                     Proyectos
                 </h2>
 
-                <div
-                    className={`grid gap-10 ${projects.length > 1 ? "md:grid-cols-2" : "max-w-xl mx-auto"
-                        }`}
-                >
+                <div className={`grid gap-10 ${projects.length > 1 ? "md:grid-cols-2" : "max-w-xl mx-auto"}`}>
                     {projects.map((project, index) => (
                         <motion.div
                             key={index}
@@ -40,7 +37,7 @@ export default function Projects() {
                                 <img
                                     src={project.img}
                                     alt={project.title}
-                                    className="w-full h-full object-contain object-center p-4"
+                                    className="w-full h-full object-cover object-center transition-transform duration-300 hover:scale-105"
                                 />
                             </div>
 
