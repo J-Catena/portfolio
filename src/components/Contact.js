@@ -1,0 +1,62 @@
+import { motion } from "framer-motion";
+import { Mail, Github, Linkedin } from "lucide-react";
+
+export default function Contact() {
+    return (
+        <section id="contact" className="py-20 bg-white px-6">
+            <div className="container mx-auto text-center max-w-3xl">
+                <motion.h2
+                    className="text-3xl font-bold text-gray-800 mb-6"
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.8 }}
+                >
+                    Contacto
+                </motion.h2>
+
+                <motion.p
+                    className="text-lg text-gray-600 mb-8"
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.3, duration: 0.8 }}
+                >
+                    ¿Quieres colaborar o hablar sobre un proyecto?
+                    Puedes contactarme a través de mis redes o enviarme un correo.
+                </motion.p>
+
+                <motion.div
+                    className="flex justify-center gap-8 text-lg font-medium"
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.6, duration: 0.8 }}
+                >
+                    <a
+                        href="mailto:juancatena91@gmail.com"
+                        className="flex items-center gap-2 text-gray-700 hover:text-blue-600 transition"
+                    >
+                        <Mail size={22} /> Email
+                    </a>
+                    <a
+                        href="https://github.com/J-Catena"
+                        target="_blank"
+                        rel="noreferrer"
+                        className="flex items-center gap-2 text-gray-700 hover:text-blue-600 transition"
+                    >
+                        <Github size={22} /> GitHub
+                    </a>
+                    <a
+                        href="https://www.linkedin.com/in/juan-catena-marin"
+                        target="_blank"
+                        rel="noreferrer"
+                        className="flex items-center gap-2 text-gray-700 hover:text-blue-600 transition"
+                    >
+                        <Linkedin size={22} /> LinkedIn
+                    </a>
+                </motion.div>
+            </div>
+        </section>
+    );
+}
