@@ -1,79 +1,67 @@
+// src/components/Navbar.js
 import { useState } from "react";
-import useDarkMode from "../hooks/useDarkMode";
-import { Sun, Moon, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 
 export default function Navbar() {
-    const [darkMode, setDarkMode] = useDarkMode();
-    const [isOpen, setIsOpen] = useState(false);
+  const [open, setOpen] = useState(false);
 
-    const navLinks = [
-        { name: "Sobre mí", href: "#about" },
-        { name: "Proyectos", href: "#projects" },
-        { name: "Contacto", href: "#contact" },
-    ];
+  const navItems = [
+    { name: "Inicio", href: "#home" },
+    { name: "Proyectos", href: "#projects" },
+    { name: "Sobre mí", href: "#about" },
+    { name: "Contacto", href: "#contact" },
+  ];
 
-    return (
-        <nav className="fixed w-full bg-white dark:bg-gray-900 shadow-md z-50">
-            <div className="container mx-auto px-6 py-4 flex justify-between items-center">
-                {/* Logo / Nombre */}
+  return (
+    <nav className="fixed w-full top-0 z-50 bg-gray-900/80 backdrop-blur-md text-white shadow-md">
+      <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+        {/* Logo */}
+        <a href="#home" className="text-2xl font-bold text-indigo-400">
+          JC
+        </a>
+
+        {/* Desktop Menu */}
+        <ul className="hidden md:flex gap-8 font-medium">
+          {navItems.map((item) => (
+            <li key={item.name}>
+              <a
+                href={item.href}
+                className="hover:text-indigo-400 transition-colors"
+              >
+                {item.name}
+              </a>
+            </li>
+          ))}
+        </ul>
+
+        {/* Mobile Menu Button */}
+        <button
+          className="md:hidden"
+          onClick={() => setOpen(!open)}
+          aria-label="Toggle Menu"
+        >
+          {open ? <X size={28} /> : <Menu size={28} />}
+        </button>
+      </div>
+
+      {/* Mobile Menu */}
+      {open && (
+        <div className="md:hidden bg-gray-800 border-t border-gray-700">
+          <ul className="flex flex-col items-center py-6 gap-6 font-medium">
+            {navItems.map((item) => (
+              <li key={item.name}>
                 <a
-                    href="#hero"
-                    className="text-xl font-bold text-gray-800 dark:text-white"
+                  href={item.href}
+                  onClick={() => setOpen(false)}
+                  className="hover:text-indigo-400 transition-colors"
                 >
-                    Juan Catena
+                  {item.name}
                 </a>
-
-                {/* Botones de escritorio */}
-                <div className="hidden md:flex items-center gap-6">
-                    {navLinks.map((link) => (
-                        <a
-                            key={link.name}
-                            href={link.href}
-                            className="text-gray-600 dark:text-gray-300 hover:text-blue-600"
-                        >
-                            {link.name}
-                        </a>
-                    ))}
-                    <button
-                        onClick={() => setDarkMode(!darkMode)}
-                        className="p-2 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 transition"
-                    >
-                        {darkMode ? <Sun size={20} /> : <Moon size={20} />}
-                    </button>
-                </div>
-
-                {/* Móvil: menú hamburguesa + dark mode */}
-                <div className="md:hidden flex items-center gap-4">
-                    <button
-                        onClick={() => setDarkMode(!darkMode)}
-                        className="p-2 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 transition"
-                    >
-                        {darkMode ? <Sun size={20} /> : <Moon size={20} />}
-                    </button>
-                    <button
-                        onClick={() => setIsOpen(!isOpen)}
-                        className="text-gray-800 dark:text-white"
-                    >
-                        {isOpen ? <X size={28} /> : <Menu size={28} />}
-                    </button>
-                </div>
-            </div>
-
-            {/* Menú móvil desplegable */}
-            {isOpen && (
-                <div className="md:hidden px-6 pb-4 bg-white dark:bg-gray-900">
-                    {navLinks.map((link) => (
-                        <a
-                            key={link.name}
-                            href={link.href}
-                            onClick={() => setIsOpen(false)} // cerrar menú al hacer clic
-                            className="block py-2 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400"
-                        >
-                            {link.name}
-                        </a>
-                    ))}
-                </div>
-            )}
-        </nav>
-    );
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+    </nav>
+  );
 }

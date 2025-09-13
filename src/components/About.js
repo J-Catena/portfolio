@@ -39,71 +39,74 @@ export default function About() {
   return (
     <section
       id="about"
-      className="py-20 px-4 sm:px-6 md:px-12 bg-white dark:bg-[#1f2937] transition-colors duration-300"
+      className="min-h-screen flex flex-col justify-center bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-gray-200 px-6 py-20 pb-20"
     >
-      <div className="max-w-4xl mx-auto text-center">
-        <motion.h2
-          className="text-3xl sm:text-4xl font-bold text-gray-800 dark:text-white mb-6"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-        >
-          Sobre mí
-        </motion.h2>
+      <motion.h2
+        className="text-4xl font-bold text-white text-center mb-16"
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8 }}
+      >
+        Sobre mí
+      </motion.h2>
 
-        <motion.p
-          className="text-base sm:text-lg text-gray-700 dark:text-gray-300 leading-relaxed"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.3, duration: 0.8 }}
-        >
-          Soy un{" "}
-          <span className="font-semibold text-blue-600 dark:text-blue-400">
-            desarrollador Full Stack
-          </span>{" "}
-          con formación en{" "}
-          <span className="font-semibold">
-            Frontend (React, TailwindCSS, JavaScript)
-          </span>{" "}
-          y <span className="font-semibold">Backend (Python, Django)</span>. Me
-          motiva seguir aprendiendo y aportar en proyectos modernos, creando{" "}
-          <span className="font-semibold text-gray-800 dark:text-gray-100">
-            aplicaciones rápidas, accesibles y fáciles de usar
-          </span>
-          , con código limpio y buenas prácticas. Estoy en constante evolución y
-          abierto a nuevos retos, ya sea en{" "}
-          <span className="font-semibold">frontend</span> o{" "}
-          <span className="font-semibold">backend</span>, con el objetivo de
-          seguir mejorando cada día como profesional.
-        </motion.p>
+      <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+        {/* Foto */}
+        <div className="relative w-60 h-60 md:w-72 md:h-72 mx-auto">
+          {/* Halo difuminado */}
+          <div className="absolute -inset-1 rounded-full bg-gradient-to-tr from-indigo-400 to-purple-500 blur-xl opacity-40"></div>
 
-        {/* Skills / Tecnologías */}
-        <motion.div
-          className="flex justify-center flex-wrap gap-6 mt-10"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.4, duration: 0.8 }}
-        >
-          {skills.map((skill, index) => (
-            <div
-              key={index}
-              className="flex flex-col items-center group transition-transform hover:scale-110"
-            >
-              <img
-                src={skill.icon}
-                alt={skill.name}
-                title={skill.name}
-                className="w-12 h-12"
-              />
-              <span className="mt-2 text-sm text-gray-700 dark:text-gray-300 opacity-0 group-hover:opacity-100 transition-opacity">
-                {skill.name}
-              </span>
-            </div>
-          ))}
-        </motion.div>
+          {/* Foto */}
+          <motion.img
+            src="/images/foto_personal2.png"
+            alt="Foto de Juan Catena - Desarrollador Full Stack"
+            className="relative z-10 w-full h-full rounded-full object-cover object-top bg-gray-900
+               hover:scale-105 transition-transform duration-300 shadow-lg"
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+          />
+        </div>
+
+        {/* Texto + skills */}
+        <div>
+          <motion.p className="text-lg leading-relaxed mb-10">
+            Soy <span className="font-semibold text-white">Juan Catena</span>,
+            <span className="text-indigo-400"> Desarrollador Full Stack</span> y{" "}
+            <span className="font-semibold">
+              Técnico Superior en Desarrollo de Aplicaciones Multiplataforma
+            </span>
+            . Tengo experiencia en{" "}
+            <span className="font-semibold">
+              Frontend (React, TailwindCSS, JavaScript)
+            </span>{" "}
+            y <span className="font-semibold">Backend (Python, Django)</span>.
+            Me motiva crear aplicaciones rápidas, accesibles y con buenas
+            prácticas de desarrollo. Siempre estoy en constante aprendizaje y
+            abierto a nuevos retos.
+          </motion.p>
+
+          {/* Skills */}
+          <motion.div
+            className="flex flex-wrap gap-4"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.4, duration: 0.8 }}
+          >
+            {skills.map((skill, index) => (
+              <div
+                key={index}
+                className="flex items-center gap-2 bg-gray-700/50 border border-gray-600/40 px-4 py-2 rounded-xl hover:bg-gray-600 transition"
+              >
+                <img src={skill.icon} alt={skill.name} className="w-6 h-6" />
+                <span className="text-sm">{skill.name}</span>
+              </div>
+            ))}
+          </motion.div>
+        </div>
       </div>
     </section>
   );
