@@ -6,7 +6,7 @@ export default function Projects() {
       title: "Web Stihl",
       desc: "Sitio web corporativo hecho con Django, Python y TailwindCSS. Actualmente desplegado en producción en PythonAnywhere.",
       img: "/images/foto-proyecto-stihl.png",
-      demo: "https://jcatena.pythonanywhere.com",
+      demo: "https://www.jorgegarciastihl.es/",
       github: "https://github.com/J-Catena/Web-Stihl",
     },
     // Puedes añadir más proyectos aquí...
