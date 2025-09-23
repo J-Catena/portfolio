@@ -9,7 +9,15 @@ export default function Projects() {
       demo: "https://www.jorgegarciastihl.es/",
       github: "https://github.com/J-Catena/Web-Stihl",
     },
-    // Puedes añadir más proyectos aquí...
+     {
+      title: "Mi Blog",
+      desc: "Blog personal desarrollado con Django, Python y Bootstrap 5. Incluye categorías, buscador, sistema de posts y diseño responsive.",
+      img: "/images/foto-proyecto-blog.png",
+      demo: "https://jcatena.pythonanywhere.com/",
+      github: "https://github.com/J-Catena/Blog-Django",
+    },
+    
+    
   ];
 
   return (
