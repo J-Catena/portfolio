@@ -9,15 +9,16 @@ export default function Projects() {
       demo: "https://www.jorgegarciastihl.es/",
       github: "https://github.com/J-Catena/Web-Stihl",
     },
-     {
-      title: "Mi Blog",
-      desc: "Blog personal desarrollado con Django, Python y Bootstrap 5. Incluye categorías, buscador, sistema de posts y diseño responsive.",
+    {
+      title: "Todo Motor",
+      desc: "Todo Motor es un blog sobre coches y motos construido con Django y Bootstrap 5. Ofrece un sistema completo de posts con categorías, buscador integrado y diseño responsive, pensado para una experiencia fluida tanto en escritorio como en móviles.",
       img: "/images/foto-proyecto-blog.png",
       demo: "https://jcatena.pythonanywhere.com/",
       github: "https://github.com/J-Catena/Blog-Django",
     },
-    
-    
+
+
+
   ];
 
   return (
@@ -37,9 +38,8 @@ export default function Projects() {
         </motion.h2>
 
         <div
-          className={`grid gap-10 ${
-            projects.length > 1 ? "md:grid-cols-2" : "max-w-xl mx-auto"
-          }`}
+          className={`grid gap-10 ${projects.length > 1 ? "md:grid-cols-2" : "max-w-xl mx-auto"
+            }`}
         >
           {projects.map((project, index) => (
             <motion.div
