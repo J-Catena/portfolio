@@ -4,21 +4,25 @@ export default function Projects() {
   const projects = [
     {
       title: "Web Stihl",
-      desc: "Sitio web corporativo hecho con Django, Python y TailwindCSS. Actualmente desplegado en producción en Render.",
+      desc: "Sitio web corporativo desarrollado con Django, Python y TailwindCSS. Desplegado en producción en Render, con un diseño limpio y profesional para una empresa real.",
       img: "/images/foto-proyecto-stihl.png",
       demo: "https://www.jorgegarciastihl.es/",
       github: "https://github.com/J-Catena/Web-Stihl",
     },
     {
       title: "Todo Motor",
-      desc: "Todo Motor es un blog sobre coches y motos construido con Django y Bootstrap 5. Ofrece un sistema completo de posts con categorías, buscador integrado y diseño responsive, pensado para una experiencia fluida tanto en escritorio como en móviles.",
+      desc: "Blog temático sobre coches y motos construido con Django y Bootstrap 5. Incluye sistema de posts con categorías, buscador, panel de administración y diseño totalmente responsive.",
       img: "/images/foto-proyecto-blog.png",
       demo: "https://jcatena.pythonanywhere.com/",
       github: "https://github.com/J-Catena/Blog-Django",
     },
-
-
-
+    {
+      title: "Scenra App",
+      desc: "Aplicación web interactiva creada con React, TypeScript y Vite que permite explorar películas y series, ver tráilers, reparto y crear listas personalizadas. Inspirada en plataformas de streaming y alimentada por la API de TMDB.",
+      img: "/images/foto-proyecto-scenra.png",
+      demo: "https://scenra-app.vercel.app/",
+      github: "https://github.com/J-Catena/Scenra-app",
+    },
   ];
 
   return (
