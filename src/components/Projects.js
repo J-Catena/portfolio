@@ -27,6 +27,14 @@ export default function Projects() {
       demo: "https://scenra-app.vercel.app/",
       github: "https://github.com/J-Catena/Scenra-app",
     },
+    {
+      title: t("projects.travelsplit.title"),
+      desc: t("projects.travelsplit.desc"),
+      img: "/images/foto-proyecto-travelsplit.png",
+      demo: "https://travel-split-one.vercel.app/",
+      github: "https://github.com/J-Catena/TravelSplit",
+    },
+
   ];
 
   return (

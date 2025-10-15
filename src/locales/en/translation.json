@@ -15,6 +15,8 @@
     "projects.todomotor.desc": "A themed blog about cars and motorcycles built with Django and Bootstrap 5. Includes a post system with categories, search function, admin panel and fully responsive design.",
     "projects.scenra.title": "Scenra App",
     "projects.scenra.desc": "Interactive web app built with React, TypeScript and Vite that allows users to explore movies and series, view trailers, cast, and create custom lists. Inspired by streaming platforms and powered by the TMDB API.",
+    "projects.travelsplit.title": "TravelSplit",
+    "projects.travelsplit.desc": "Web app to split and manage group travel expenses with automatic balances, interactive charts, guest mode and login",
     "footer.designedBy": "Designed and developed by",
     "footer.email": "Send email",
     "contact.title": "Contact",
