@@ -29,7 +29,7 @@ A lo largo del proceso, he aprendido sobre:
 Si quieres ejecutarlo localmente:
 
 ```bash
-git clone https://github.com/tu-usuario/portfolio.git
+git clone https://github.com/J-Catena/portfolio.git
 cd portfolio
 npm install
 npm start
