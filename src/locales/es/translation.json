@@ -6,7 +6,7 @@
     "hero.downloadCV": "Descargar CV",
     "about.title": "Sobre mí",
     "about.photoAlt": "Foto de Juan Catena - Desarrollador Backend",
-    "about.paragraph": "Soy Juan Catena, Desarrollador Backend y Técnico Superior en Desarrollo de Aplicaciones Multiplataforma. Tengo experiencia en Frontend (React, TailwindCSS, JavaScript) y Backend (Python, Django). Me motiva crear aplicaciones rápidas, accesibles y con buenas prácticas de desarrollo. Siempre estoy en constante aprendizaje y abierto a nuevos retos.",
+    "about.paragraph": "Soy Juan Catena, desarrollador backend especializado en Java y Spring Boot. Diseño y construyo APIs, lógica de negocio y sistemas internos que resuelven necesidades reales, desde gestión de inventario y facturación hasta automatización de procesos operativos.Vengo de trabajar con Python y Django en aplicaciones internas de empresa, y actualmente estoy profundizando en arquitectura backend, microservicios, SQL y buenas prácticas para crear proyectos estables, escalables y en producción. Mi objetivo es claro: crecer como backend developer y aportar valor construyendo software que funcione, escale y tenga impacto real.",
     "projects.title": "Proyectos",
     "projects.demo": "Demo",
     "projects.webstihl.title": "Web Stihl",

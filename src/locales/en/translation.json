@@ -6,7 +6,7 @@
     "hero.downloadCV": "Download CV",
     "about.title": "About Me",
     "about.photoAlt": "Photo of Juan Catena - Backend Developer",
-    "about.paragraph": "I'm Juan Catena, a Backend Developer and Higher Technician in Cross-Platform Application Development. I have experience in Frontend (React, TailwindCSS, JavaScript) and Backend (Python, Django). I'm motivated by building fast, accessible applications with good development practices. I'm always learning and open to new challenges.",
+    "about.paragraph": "I’m Juan Catena, a backend developer specialized in Java and Spring Boot. I design and build APIs, business logic, and internal systems that solve real operational needs — from inventory and billing management to workflow automation. I have previous experience working with Python and Django to develop internal company tools, and I’m currently deepening my expertise in backend architecture, microservices, SQL, and best practices to create stable, scalable, production-ready systems. My goal is straightforward: grow as a backend developer and deliver real value by building software that works, scales, and makes an impact.",
     "projects.title": "Projects",
     "projects.demo": "Demo",
     "projects.webstihl.title": "Web Stihl",
