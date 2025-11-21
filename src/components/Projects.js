@@ -7,6 +7,13 @@ export default function Projects() {
 
   const projects = [
     {
+      title: "SpringTrip — Java Backend",
+      desc: "Backend system for managing group trips, participants and shared expenses. Built with Java and Spring Boot using a modular, production-ready architecture. Currently in active development.",
+      img: "/images/foto-proyecto-springtrip.png", 
+      demo: "", 
+      github: "https://github.com/J-Catena/SpringTrip",
+    },
+    {
       title: t("projects.webstihl.title"),
       desc: t("projects.webstihl.desc"),
       img: "/images/foto-proyecto-stihl.png",
@@ -34,6 +41,7 @@ export default function Projects() {
       demo: "https://travel-split-one.vercel.app/",
       github: "https://github.com/J-Catena/TravelSplit",
     },
+
 
   ];
 
