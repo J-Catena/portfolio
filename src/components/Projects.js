@@ -7,10 +7,10 @@ export default function Projects() {
 
   const projects = [
     {
-      title: "SpringTrip — Java Backend",
-      desc: "Backend system for managing group trips, participants and shared expenses. Built with Java and Spring Boot using a modular, production-ready architecture. Currently in active development.",
-      img: "/images/foto-proyecto-springtrip.png", 
-      demo: "", 
+      title: t("projects.springtrip.title"),
+      desc: t("projects.springtrip.desc"),
+      img: "/images/foto-proyecto-springtrip.png",
+      demo: "",
       github: "https://github.com/J-Catena/SpringTrip",
     },
     {
