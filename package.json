@@ -8,17 +8,25 @@
     "@testing-library/react": "^16.3.0",
     "@testing-library/user-event": "^13.5.0",
     "framer-motion": "^12.23.12",
+    "i18next": "^25.5.3",
+    "i18next-browser-languagedetector": "^8.2.0",
     "lucide-react": "^0.543.0",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
+    "react-i18next": "^16.0.0",
     "react-scripts": "5.0.1",
+    "typescript": "4.9.5",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "preinstall": "npm config set legacy-peer-deps true",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
+  },
+  "resolutions": {
+    "typescript": "5.9.3"
   },
   "eslintConfig": {
     "extends": [

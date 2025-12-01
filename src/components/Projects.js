@@ -1,15 +1,48 @@
+// src/components/Projects.js
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 export default function Projects() {
+  const { t } = useTranslation();
+
   const projects = [
     {
-      title: "Web Stihl",
-      desc: "Sitio web corporativo hecho con Django, Python y TailwindCSS. Actualmente desplegado en producción en PythonAnywhere.",
+      title: t("projects.springtrip.title"),
+      desc: t("projects.springtrip.desc"),
+      img: "/images/foto-proyecto-springtrip.png",
+      demo: "",
+      github: "https://github.com/J-Catena/SpringTrip",
+    },
+    {
+      title: t("projects.webstihl.title"),
+      desc: t("projects.webstihl.desc"),
       img: "/images/foto-proyecto-stihl.png",
-      demo: "https://jcatena.pythonanywhere.com",
+      demo: "https://www.jorgegarciastihl.es/",
       github: "https://github.com/J-Catena/Web-Stihl",
     },
-    // Puedes añadir más proyectos aquí...
+    {
+      title: t("projects.todomotor.title"),
+      desc: t("projects.todomotor.desc"),
+      img: "/images/foto-proyecto-blog.png",
+      demo: "https://jcatena.pythonanywhere.com/",
+      github: "https://github.com/J-Catena/Blog-Django",
+    },
+    {
+      title: t("projects.scenra.title"),
+      desc: t("projects.scenra.desc"),
+      img: "/images/foto-proyecto-scenra.png",
+      demo: "https://scenra-app.vercel.app/",
+      github: "https://github.com/J-Catena/Scenra-app",
+    },
+    {
+      title: t("projects.travelsplit.title"),
+      desc: t("projects.travelsplit.desc"),
+      img: "/images/foto-proyecto-travelsplit.png",
+      demo: "https://travel-split-one.vercel.app/",
+      github: "https://github.com/J-Catena/TravelSplit",
+    },
+
+
   ];
 
   return (
@@ -25,13 +58,12 @@ export default function Projects() {
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          Proyectos
+          {t("projects.title")}
         </motion.h2>
 
         <div
-          className={`grid gap-10 ${
-            projects.length > 1 ? "md:grid-cols-2" : "max-w-xl mx-auto"
-          }`}
+          className={`grid gap-10 ${projects.length > 1 ? "md:grid-cols-2" : "max-w-xl mx-auto"
+            }`}
         >
           {projects.map((project, index) => (
             <motion.div
@@ -68,7 +100,7 @@ export default function Projects() {
                       rel="noreferrer"
                       className="px-5 py-2 bg-indigo-500 hover:bg-indigo-600 text-white rounded-xl text-sm transition"
                     >
-                      Demo
+                      {t("projects.demo")}
                     </a>
                   )}
                   {project.github && (

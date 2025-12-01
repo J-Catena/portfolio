@@ -1,7 +1,11 @@
+// src/components/Contact.js
 import { motion } from "framer-motion";
 import { Mail, Github, Linkedin } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 export default function Contact() {
+  const { t } = useTranslation();
+
   return (
     <section
       id="contact"
@@ -15,7 +19,7 @@ export default function Contact() {
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          Contacto
+          {t("contact.title")}
         </motion.h2>
 
         <motion.p
@@ -25,8 +29,7 @@ export default function Contact() {
           viewport={{ once: true }}
           transition={{ delay: 0.3, duration: 0.8 }}
         >
-          ¿Quieres colaborar o hablar sobre un proyecto? Puedes escribirme
-          directamente o conectar en redes.
+          {t("contact.text")}
         </motion.p>
 
         <motion.div
@@ -40,7 +43,7 @@ export default function Contact() {
             href="mailto:juancatena91@gmail.com"
             className="flex items-center gap-2 bg-indigo-500 hover:bg-indigo-600 px-6 py-3 rounded-xl text-white font-medium shadow-lg hover:shadow-indigo-500/30 transition"
           >
-            <Mail size={22} /> Email
+            <Mail size={22} /> {t("contact.email")}
           </a>
 
           <a
