@@ -45,7 +45,7 @@ export default function Hero() {
           {t("hero.viewProjects")} <ArrowRight size={18} />
         </a>
         <a
-          href="/CV Juan Catena.pdf"
+          href="/Curriculum-Juan-Catena.pdf"
           download="CV Juan Catena.pdf"
           className="border border-indigo-400 px-6 py-3 rounded-2xl hover:bg-indigo-500 hover:text-white transition"
         >
