@@ -1,9 +1,11 @@
 // src/components/Projects.js
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
+import { useMemo, useState } from "react";
 
 export default function Projects() {
   const { t } = useTranslation();
+  const [showAll, setShowAll] = useState(false);
 
   const projects = [
     {
@@ -48,9 +50,13 @@ export default function Projects() {
       demo: "https://travel-split-one.vercel.app/",
       github: "https://github.com/J-Catena/TravelSplit",
     },
-
-
   ];
+
+  const initialCount = 4;
+
+  const visibleProjects = useMemo(() => {
+    return showAll ? projects : projects.slice(0, initialCount);
+  }, [showAll, projects]);
 
   return (
     <section
@@ -69,17 +75,18 @@ export default function Projects() {
         </motion.h2>
 
         <div
-          className={`grid gap-10 ${projects.length > 1 ? "md:grid-cols-2" : "max-w-xl mx-auto"
-            }`}
+          className={`grid gap-10 ${
+            projects.length > 1 ? "md:grid-cols-2" : "max-w-xl mx-auto"
+          }`}
         >
-          {projects.map((project, index) => (
+          {visibleProjects.map((project, index) => (
             <motion.div
               key={index}
               className="rounded-2xl overflow-hidden bg-gray-800 border border-gray-700 shadow-lg hover:shadow-indigo-500/20 hover:border-indigo-400 hover:bg-gray-700 transition transform hover:-translate-y-1"
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: index * 0.2 }}
+              transition={{ duration: 0.6, delay: index * 0.08 }}
             >
               {/* Imagen */}
               <div className="w-full h-56 sm:h-64 md:h-72 overflow-hidden">
@@ -125,6 +132,17 @@ export default function Projects() {
             </motion.div>
           ))}
         </div>
+
+        {projects.length > initialCount && (
+          <div className="flex justify-center mt-10">
+            <button
+              onClick={() => setShowAll((v) => !v)}
+              className="px-6 py-3 rounded-xl border border-gray-600 text-gray-200 hover:bg-gray-800 transition"
+            >
+              {showAll ? t("projects.showLess") : t("projects.showMore")}
+            </button>
+          </div>
+        )}
       </div>
     </section>
   );
