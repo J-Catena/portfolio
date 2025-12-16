@@ -12,7 +12,7 @@ export default function Projects() {
       title: t("projects.springtrip.title"),
       desc: t("projects.springtrip.desc"),
       img: "/images/foto-proyecto-springtrip.png",
-      demo: "",
+      demo: "https://spring-trip.vercel.app",
       github: "https://github.com/J-Catena/SpringTrip",
     },
     {
