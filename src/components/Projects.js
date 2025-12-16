@@ -14,6 +14,13 @@ export default function Projects() {
       github: "https://github.com/J-Catena/SpringTrip",
     },
     {
+      title: t("projects.storeflow.title"),
+      desc: t("projects.storeflow.desc"),
+      img: "/images/foto-proyecto-storeflow.png",
+      demo: "",
+      github: "https://github.com/J-Catena/StoreFlow",
+    },
+    {
       title: t("projects.webstihl.title"),
       desc: t("projects.webstihl.desc"),
       img: "/images/foto-proyecto-stihl.png",

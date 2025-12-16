@@ -27,5 +27,7 @@
     "navbar.home": "Home",
     "navbar.projects": "Projects",
     "navbar.about": "About Me",
-    "navbar.contact": "Contact"
+    "navbar.contact": "Contact",
+    "projects.storeflow.title": "StoreFlow",
+    "projects.storeflow.desc": "Backend system for inventory, sales and workshop management, focused on real business rules, transactional integrity and stock consistency."
 }

@@ -27,5 +27,7 @@
     "navbar.contact": "Contacto",
     "contact.title": "Contacto",
     "contact.text": "¿Quieres colaborar o hablar sobre un proyecto? Puedes escribirme directamente o conectar en redes.",
-    "contact.email": "Email"
+    "contact.email": "Email",
+    "projects.storeflow.title": "StoreFlow",
+    "projects.storeflow.desc": "Sistema backend para la gestión de inventario, ventas y taller, enfocado en reglas de negocio reales, integridad transaccional y consistencia de stock."
 }
