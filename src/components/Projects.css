@@ -1,0 +1,40 @@
+/* ===== Projects Spotlight (whole section) ===== */
+.projects-spotlight {
+    position: relative;
+    --spot-x: 50%;
+    --spot-y: 50%;
+    --spot-opacity: 0;
+}
+
+.projects-spotlight::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: var(--spot-opacity);
+    transition: opacity 160ms ease;
+
+    background:
+        radial-gradient(16rem 16rem at var(--spot-x) var(--spot-y),
+            rgba(99, 102, 241, 0.40),
+            rgba(99, 102, 241, 0.14) 35%,
+            transparent 65%),
+        radial-gradient(26rem 26rem at var(--spot-x) var(--spot-y),
+            rgba(99, 102, 241, 0.20),
+            transparent 72%);
+
+    filter: blur(8px);
+    z-index: 0;
+}
+
+.projects-spotlight>* {
+    position: relative;
+    z-index: 1;
+}
+
+/* Móvil: sin spotlight */
+@media (max-width: 768px) {
+    .projects-spotlight::before {
+        display: none;
+    }
+}

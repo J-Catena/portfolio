@@ -1,3 +1,7 @@
+/* =========================
+   Base (CRA default)
+   ========================= */
+
 .App {
   text-align: center;
 }
@@ -32,7 +36,78 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
+}
+
+/* =========================
+   UX / Selection behavior
+   ========================= */
+
+/* Evita selección accidental en layout */
+section,
+header,
+footer {
+  user-select: none;
+}
+
+/* Permite seleccionar texto real */
+p,
+h1,
+h2,
+h3,
+li,
+span {
+  user-select: text;
+}
+
+/* =========================
+   Decorative layers (no mouse events)
+   ========================= */
+
+.overlay,
+.projects-spotlight::before {
+  pointer-events: none;
+}
+
+/* =========================
+   About photo (presence effect)
+   ========================= */
+
+.about-photo,
+.about-photo * {
+  user-select: none;
+}
+
+.about-photo {
+  cursor: default;
+}
+
+.about-photo-glow {
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  pointer-events: none;
+}
+
+/* =========================
+   Caret fix (removes the "text cursor" line)
+   ========================= */
+
+/* Oculta el caret en toda la app por defecto */
+html,
+body,
+#root,
+.App,
+main,
+section,
+div {
+  caret-color: transparent;
+}
+
+/* Restaura caret donde sí toca */
+input,
+textarea,
+[contenteditable="true"] {
+  caret-color: auto;
 }
