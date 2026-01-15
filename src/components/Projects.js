@@ -26,12 +26,12 @@ export default function Projects() {
       github: "https://github.com/J-Catena/StoreFlow",
     },
     {
-      id: "webstihl",
+      id: "Local Store Web",
       title: t("projects.webstihl.title"),
       desc: t("projects.webstihl.desc"),
       img: "/images/foto-proyecto-stihl.png",
       demo: "https://www.jorgegarciastihl.es/",
-      github: "https://github.com/J-Catena/Web-Stihl",
+      github: "https://github.com/J-Catena/Local-Store-Web",
     },
     {
       id: "todomotor",
