@@ -19,10 +19,10 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="fixed w-full top-0 z-50 bg-gray-900/80 backdrop-blur-md text-white shadow-md">
+    <nav className="fixed w-full top-0 z-50 bg-slate-900/80 backdrop-blur-md text-white shadow-md">
       <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
         {/* Logo */}
-        <a href="#home" className="text-2xl font-bold text-indigo-400">
+        <a href="#home" className="text-2xl font-bold text-blue-400">
           Juan Catena
         </a>
 
@@ -33,7 +33,7 @@ export default function Navbar() {
               <li key={item.name}>
                 <a
                   href={item.href}
-                  className="hover:text-indigo-400 transition-colors"
+                  className="hover:text-blue-400 transition-colors"
                 >
                   {item.name}
                 </a>
@@ -42,11 +42,11 @@ export default function Navbar() {
           </ul>
 
           {/* Language Switcher */}
-          <div className="flex items-center gap-2 border border-gray-700 rounded-full px-3 py-1 ml-4 bg-gray-800/60 backdrop-blur-sm">
+          <div className="flex items-center gap-2 border border-slate-700 rounded-full px-3 py-1 ml-4 bg-slate-800/60 backdrop-blur-sm">
             <button
               onClick={() => changeLanguage("es")}
               className={`text-sm font-semibold ${i18n.language === "es"
-                  ? "text-indigo-400"
+                  ? "text-blue-400"
                   : "text-gray-400 hover:text-white"
                 } transition`}
             >
@@ -56,7 +56,7 @@ export default function Navbar() {
             <button
               onClick={() => changeLanguage("en")}
               className={`text-sm font-semibold ${i18n.language === "en"
-                  ? "text-indigo-400"
+                  ? "text-blue-400"
                   : "text-gray-400 hover:text-white"
                 } transition`}
             >
@@ -77,14 +77,14 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {open && (
-        <div className="md:hidden bg-gray-800 border-t border-gray-700">
+        <div className="md:hidden bg-slate-800 border-t border-slate-700">
           <ul className="flex flex-col items-center py-6 gap-6 font-medium">
             {navItems.map((item) => (
               <li key={item.name}>
                 <a
                   href={item.href}
                   onClick={() => setOpen(false)}
-                  className="hover:text-indigo-400 transition-colors"
+                  className="hover:text-blue-400 transition-colors"
                 >
                   {item.name}
                 </a>
@@ -92,11 +92,11 @@ export default function Navbar() {
             ))}
 
             {/* Switcher móvil */}
-            <div className="flex items-center gap-3 mt-4 border border-gray-700 rounded-full px-3 py-1 bg-gray-900/60">
+            <div className="flex items-center gap-3 mt-4 border border-slate-700 rounded-full px-3 py-1 bg-slate-900/60">
               <button
                 onClick={() => changeLanguage("es")}
                 className={`text-sm ${i18n.language === "es"
-                    ? "text-indigo-400"
+                    ? "text-blue-400"
                     : "text-gray-400 hover:text-white"
                   }`}
               >
@@ -106,7 +106,7 @@ export default function Navbar() {
               <button
                 onClick={() => changeLanguage("en")}
                 className={`text-sm ${i18n.language === "en"
-                    ? "text-indigo-400"
+                    ? "text-blue-400"
                     : "text-gray-400 hover:text-white"
                   }`}
               >

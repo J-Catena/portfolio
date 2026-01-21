@@ -16,18 +16,18 @@
 
     background:
         radial-gradient(16rem 16rem at var(--spot-x) var(--spot-y),
-            rgba(99, 102, 241, 0.40),
-            rgba(99, 102, 241, 0.14) 35%,
+            rgba(59, 130, 246, 0.40),   /* azul */
+            rgba(59, 130, 246, 0.14) 35%,
             transparent 65%),
         radial-gradient(26rem 26rem at var(--spot-x) var(--spot-y),
-            rgba(99, 102, 241, 0.20),
+            rgba(59, 130, 246, 0.20),
             transparent 72%);
 
     filter: blur(8px);
     z-index: 0;
 }
 
-.projects-spotlight>* {
+.projects-spotlight > * {
     position: relative;
     z-index: 1;
 }

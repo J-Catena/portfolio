@@ -91,7 +91,7 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      className="projects-spotlight py-20 pb-20 bg-gradient-to-b from-gray-800 via-gray-900 to-gray-800 px-4 sm:px-6 md:px-12"
+      className="projects-spotlight py-20 pb-20 bg-gradient-to-b from-slate-800 via-slate-900 to-slate-800 px-4 sm:px-6 md:px-12"
       onPointerMove={handlePointerMove}
       onPointerLeave={handlePointerLeave}
     >
@@ -107,14 +107,13 @@ export default function Projects() {
         </motion.h2>
 
         <div
-          className={`grid gap-10 ${
-            projects.length > 1 ? "md:grid-cols-2" : "max-w-xl mx-auto"
-          }`}
+          className={`grid gap-10 ${projects.length > 1 ? "md:grid-cols-2" : "max-w-xl mx-auto"
+            }`}
         >
           {visibleProjects.map((project, index) => (
             <motion.div
               key={project.id}
-              className="rounded-2xl overflow-hidden bg-gray-800 border border-gray-700 shadow-lg hover:shadow-indigo-500/20 hover:border-indigo-400 hover:bg-gray-700 transition transform hover:-translate-y-1"
+              className="rounded-2xl overflow-hidden bg-slate-800 border border-slate-700 shadow-lg hover:shadow-blue-500/20 hover:border-blue-400 hover:bg-slate-700 transition transform hover:-translate-y-1"
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -143,7 +142,7 @@ export default function Projects() {
                       href={project.demo}
                       target="_blank"
                       rel="noreferrer"
-                      className="px-5 py-2 bg-indigo-500 hover:bg-indigo-600 text-white rounded-xl text-sm transition focus:outline-none focus:ring-2 focus:ring-indigo-300"
+                      className="px-5 py-2 bg-blue-500 hover:bg-blue-600 text-white rounded-xl text-sm transition focus:outline-none focus:ring-2 focus:ring-blue-300"
                     >
                       {t("projects.demo")}
                     </a>
@@ -153,7 +152,7 @@ export default function Projects() {
                       href={project.github}
                       target="_blank"
                       rel="noreferrer"
-                      className="px-5 py-2 border border-indigo-400 text-indigo-400 rounded-xl text-sm hover:bg-indigo-500 hover:text-white transition focus:outline-none focus:ring-2 focus:ring-indigo-300"
+                      className="px-5 py-2 border border-blue-400 text-blue-400 rounded-xl text-sm hover:bg-blue-500 hover:text-white transition focus:outline-none focus:ring-2 focus:ring-blue-300"
                     >
                       GitHub
                     </a>
@@ -168,7 +167,7 @@ export default function Projects() {
           <div className="flex justify-center mt-10">
             <button
               onClick={() => setShowAll((v) => !v)}
-              className="px-6 py-3 rounded-xl border border-gray-600 text-gray-200 hover:bg-gray-800 transition focus:outline-none focus:ring-2 focus:ring-gray-400"
+              className="px-6 py-3 rounded-xl border border-slate-600 text-gray-200 hover:bg-slate-800 transition focus:outline-none focus:ring-2 focus:ring-slate-400"
             >
               {showAll ? t("projects.showLess") : t("projects.showMore")}
             </button>

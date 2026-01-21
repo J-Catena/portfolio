@@ -47,7 +47,7 @@ export default function About() {
   return (
     <section
       id="about"
-      className="min-h-screen flex flex-col justify-center bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-gray-200 px-6 py-20 pb-20"
+      className="min-h-screen flex flex-col justify-center bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 text-gray-200 px-6 py-20 pb-20"
     >
       <motion.h2
         className="text-4xl font-bold text-white text-center mb-10"
@@ -60,7 +60,7 @@ export default function About() {
       </motion.h2>
 
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-        {/* Foto (1 wrapper + 1 glow animado) */}
+        {/* Foto */}
         <motion.div
           className="relative w-60 h-60 md:w-72 md:h-72 mx-auto about-photo"
           initial={{ opacity: 0, scale: 0.96 }}
@@ -68,7 +68,7 @@ export default function About() {
           viewport={{ once: true, amount: 0.5 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
-          {/* Glow: ahora sí se nota */}
+          {/* Glow principal */}
           <motion.div
             className="absolute -inset-6 rounded-full about-photo-glow"
             initial={{ opacity: 0.15, filter: "blur(18px)" }}
@@ -78,7 +78,7 @@ export default function About() {
             aria-hidden="true"
           />
 
-          {/* Anillo sutil para “protagonismo” */}
+          {/* Glow secundario (ANTES morado, AHORA azul) */}
           <motion.div
             className="absolute -inset-1 rounded-full"
             initial={{ opacity: 0 }}
@@ -87,7 +87,7 @@ export default function About() {
             transition={{ delay: 0.15, duration: 0.6 }}
             style={{
               background:
-                "radial-gradient(circle at 30% 30%, rgba(99,102,241,0.55), rgba(139,92,246,0.12) 55%, transparent 70%)",
+                "radial-gradient(circle at 30% 30%, rgba(59,130,246,0.55), rgba(96,165,250,0.14) 55%, transparent 70%)",
             }}
             aria-hidden="true"
           />
@@ -95,7 +95,7 @@ export default function About() {
           <motion.img
             src="/images/foto_personal2.png"
             alt={t("about.photoAlt")}
-            className="relative z-10 w-full h-full rounded-full object-cover object-top bg-gray-900 shadow-xl"
+            className="relative z-10 w-full h-full rounded-full object-cover object-top bg-slate-900 shadow-xl"
             loading="lazy"
             decoding="async"
             draggable="false"
@@ -105,7 +105,7 @@ export default function About() {
         {/* Texto + skills */}
         <div>
           <motion.p
-            className="text-indigo-400 font-medium mb-6"
+            className="text-blue-400 font-medium mb-6"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
@@ -168,10 +168,9 @@ export default function About() {
               <div
                 key={skill.name}
                 className={`flex items-center gap-2 bg-gray-700/50 border border-gray-600/40 px-4 py-2 rounded-xl transition
-                  ${
-                    ["React", "Next.js"].includes(skill.name)
-                      ? "opacity-80 hover:opacity-100"
-                      : "hover:bg-gray-600"
+                  ${["React", "Next.js"].includes(skill.name)
+                    ? "opacity-80 hover:opacity-100"
+                    : "hover:bg-gray-600"
                   }`}
                 title={skill.name}
               >

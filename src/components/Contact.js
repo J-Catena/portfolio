@@ -9,7 +9,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="py-20 pb-20 px-4 sm:px-6 bg-gradient-to-b from-gray-900 via-gray-950 to-gray-900 text-gray-300"
+      className="py-20 pb-20 px-4 sm:px-6 bg-gradient-to-b from-slate-900 via-slate-950 to-slate-900 text-gray-300"
     >
       <div className="max-w-3xl mx-auto text-center">
         <motion.h2
@@ -41,7 +41,7 @@ export default function Contact() {
         >
           <a
             href="mailto:juancatena91@gmail.com"
-            className="flex items-center gap-2 bg-indigo-500 hover:bg-indigo-600 px-6 py-3 rounded-xl text-white font-medium shadow-lg hover:shadow-indigo-500/30 transition"
+            className="flex items-center gap-2 bg-blue-500 hover:bg-blue-600 px-6 py-3 rounded-xl text-white font-medium shadow-lg hover:shadow-blue-500/30 transition"
           >
             <Mail size={22} /> {t("contact.email")}
           </a>
@@ -50,7 +50,7 @@ export default function Contact() {
             href="https://github.com/J-Catena"
             target="_blank"
             rel="noreferrer"
-            className="flex items-center gap-2 border border-indigo-400 text-indigo-400 px-6 py-3 rounded-xl font-medium hover:bg-indigo-500 hover:text-white hover:shadow-md hover:shadow-indigo-500/30 transition"
+            className="flex items-center gap-2 border border-blue-400 text-blue-400 px-6 py-3 rounded-xl font-medium hover:bg-blue-500 hover:text-white hover:shadow-md hover:shadow-blue-500/30 transition"
           >
             <Github size={22} /> GitHub
           </a>
@@ -59,7 +59,7 @@ export default function Contact() {
             href="https://www.linkedin.com/in/juan-catena-marin"
             target="_blank"
             rel="noreferrer"
-            className="flex items-center gap-2 border border-indigo-400 text-indigo-400 px-6 py-3 rounded-xl font-medium hover:bg-indigo-500 hover:text-white hover:shadow-md hover:shadow-indigo-500/30 transition"
+            className="flex items-center gap-2 border border-blue-400 text-blue-400 px-6 py-3 rounded-xl font-medium hover:bg-blue-500 hover:text-white hover:shadow-md hover:shadow-blue-500/30 transition"
           >
             <Linkedin size={22} /> LinkedIn
           </a>
