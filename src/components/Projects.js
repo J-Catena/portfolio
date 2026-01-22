@@ -5,7 +5,7 @@ import { useMemo, useState } from "react";
 import "./Projects.css";
 
 export default function Projects() {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
   const [showAll, setShowAll] = useState(false);
 
   const initialCount = 4;
@@ -61,13 +61,12 @@ export default function Projects() {
         github: "https://github.com/J-Catena/TravelSplit",
       },
     ],
-    [t, i18n.language]
+    [t]
   );
-
 
   const visibleProjects = useMemo(() => {
     return showAll ? projects : projects.slice(0, initialCount);
-  }, [showAll, projects, initialCount]);
+  }, [showAll, projects]);
 
   const handlePointerMove = (e) => {
     if (
