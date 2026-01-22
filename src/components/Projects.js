@@ -10,7 +10,7 @@ export default function Projects() {
 
   const initialCount = 4;
 
-  
+  // 🔒 Array memoizado: NO cambia en cada render, solo cuando cambia el idioma
   const projects = useMemo(
     () => [
       {
@@ -30,7 +30,7 @@ export default function Projects() {
         github: "https://github.com/J-Catena/StoreFlow",
       },
       {
-        id: "Local Store Web",
+        id: "local-store-web",
         title: t("projects.webstihl.title"),
         desc: t("projects.webstihl.desc"),
         img: "/images/foto-proyecto-stihl.png",
@@ -62,10 +62,10 @@ export default function Projects() {
         github: "https://github.com/J-Catena/TravelSplit",
       },
     ],
-    [i18n.language] 
+    [i18n.language]
   );
 
- 
+  // 🔒 useMemo correcto: dependencias estables
   const visibleProjects = useMemo(() => {
     return showAll ? projects : projects.slice(0, initialCount);
   }, [showAll, projects, initialCount]);
