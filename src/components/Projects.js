@@ -5,68 +5,72 @@ import { useMemo, useState } from "react";
 import "./Projects.css";
 
 export default function Projects() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const [showAll, setShowAll] = useState(false);
-
-  const projects = [
-    {
-      id: "springtrip",
-      title: t("projects.springtrip.title"),
-      desc: t("projects.springtrip.desc"),
-      img: "/images/foto-proyecto-springtrip.png",
-      demo: "https://spring-trip.vercel.app",
-      github: "https://github.com/J-Catena/SpringTrip",
-    },
-    {
-      id: "storeflow",
-      title: t("projects.storeflow.title"),
-      desc: t("projects.storeflow.desc"),
-      img: "/images/foto-proyecto-storeflow.png",
-      demo: "",
-      github: "https://github.com/J-Catena/StoreFlow",
-    },
-    {
-      id: "Local Store Web",
-      title: t("projects.webstihl.title"),
-      desc: t("projects.webstihl.desc"),
-      img: "/images/foto-proyecto-stihl.png",
-      demo: "https://www.jorgegarciastihl.es/",
-      github: "https://github.com/J-Catena/Local-Store-Web",
-    },
-    {
-      id: "todomotor",
-      title: t("projects.todomotor.title"),
-      desc: t("projects.todomotor.desc"),
-      img: "/images/foto-proyecto-blog.png",
-      demo: "https://jcatena.pythonanywhere.com/",
-      github: "https://github.com/J-Catena/Blog-Django",
-    },
-    {
-      id: "scenra",
-      title: t("projects.scenra.title"),
-      desc: t("projects.scenra.desc"),
-      img: "/images/foto-proyecto-scenra.png",
-      demo: "https://scenra-app.vercel.app/",
-      github: "https://github.com/J-Catena/Scenra-app",
-    },
-    {
-      id: "travelsplit",
-      title: t("projects.travelsplit.title"),
-      desc: t("projects.travelsplit.desc"),
-      img: "/images/foto-proyecto-travelsplit.png",
-      demo: "https://travel-split-one.vercel.app/",
-      github: "https://github.com/J-Catena/TravelSplit",
-    },
-  ];
 
   const initialCount = 4;
 
+  
+  const projects = useMemo(
+    () => [
+      {
+        id: "springtrip",
+        title: t("projects.springtrip.title"),
+        desc: t("projects.springtrip.desc"),
+        img: "/images/foto-proyecto-springtrip.png",
+        demo: "https://spring-trip.vercel.app",
+        github: "https://github.com/J-Catena/SpringTrip",
+      },
+      {
+        id: "storeflow",
+        title: t("projects.storeflow.title"),
+        desc: t("projects.storeflow.desc"),
+        img: "/images/foto-proyecto-storeflow.png",
+        demo: "",
+        github: "https://github.com/J-Catena/StoreFlow",
+      },
+      {
+        id: "Local Store Web",
+        title: t("projects.webstihl.title"),
+        desc: t("projects.webstihl.desc"),
+        img: "/images/foto-proyecto-stihl.png",
+        demo: "https://www.jorgegarciastihl.es/",
+        github: "https://github.com/J-Catena/Local-Store-Web",
+      },
+      {
+        id: "todomotor",
+        title: t("projects.todomotor.title"),
+        desc: t("projects.todomotor.desc"),
+        img: "/images/foto-proyecto-blog.png",
+        demo: "https://jcatena.pythonanywhere.com/",
+        github: "https://github.com/J-Catena/Blog-Django",
+      },
+      {
+        id: "scenra",
+        title: t("projects.scenra.title"),
+        desc: t("projects.scenra.desc"),
+        img: "/images/foto-proyecto-scenra.png",
+        demo: "https://scenra-app.vercel.app/",
+        github: "https://github.com/J-Catena/Scenra-app",
+      },
+      {
+        id: "travelsplit",
+        title: t("projects.travelsplit.title"),
+        desc: t("projects.travelsplit.desc"),
+        img: "/images/foto-proyecto-travelsplit.png",
+        demo: "https://travel-split-one.vercel.app/",
+        github: "https://github.com/J-Catena/TravelSplit",
+      },
+    ],
+    [i18n.language] 
+  );
+
+ 
   const visibleProjects = useMemo(() => {
     return showAll ? projects : projects.slice(0, initialCount);
-  }, [showAll, projects]);
+  }, [showAll, projects, initialCount]);
 
   const handlePointerMove = (e) => {
-    // Respeta reduced motion
     if (
       window.matchMedia &&
       window.matchMedia("(prefers-reduced-motion: reduce)").matches
@@ -74,7 +78,7 @@ export default function Projects() {
       return;
     }
 
-    const el = e.currentTarget; // el <section>
+    const el = e.currentTarget;
     const rect = el.getBoundingClientRect();
     const x = e.clientX - rect.left;
     const y = e.clientY - rect.top;
