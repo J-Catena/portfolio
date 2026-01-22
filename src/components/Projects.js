@@ -10,7 +10,6 @@ export default function Projects() {
 
   const initialCount = 4;
 
-  // 🔒 Array memoizado: NO cambia en cada render, solo cuando cambia el idioma
   const projects = useMemo(
     () => [
       {
@@ -62,10 +61,10 @@ export default function Projects() {
         github: "https://github.com/J-Catena/TravelSplit",
       },
     ],
-    [i18n.language]
+    [t, i18n.language]
   );
 
-  // 🔒 useMemo correcto: dependencias estables
+
   const visibleProjects = useMemo(() => {
     return showAll ? projects : projects.slice(0, initialCount);
   }, [showAll, projects, initialCount]);
