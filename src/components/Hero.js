@@ -13,7 +13,7 @@ export default function Hero() {
                  flex flex-col justify-center items-center text-center
                  bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950"
     >
-      {/* REFLEJOS TIPO CRISTAL: 3 bandas diagonales */}
+    
       <motion.div
         aria-hidden="true"
         className="pointer-events-none absolute inset-0 will-change-transform"
@@ -46,12 +46,10 @@ export default function Hero() {
           `,
         }}
         animate={{
-          // respiración del cristal (no desplazamiento grande)
           opacity: [0.22, 0.55, 0.26],
           scaleX: [0.98, 1.03, 0.98],
           scaleY: [0.98, 1.02, 0.98],
           filter: ["blur(0px)", "blur(1.5px)", "blur(0px)"],
-          // micro-deriva mínima para vida
           x: [0, 8, 0],
           y: [0, -6, 0],
         }}
@@ -62,7 +60,7 @@ export default function Hero() {
         }}
       />
 
-      {/* Foco suave de soporte (muy sutil) */}
+      
       <motion.div
         aria-hidden="true"
         className="pointer-events-none absolute inset-0 will-change-transform"
@@ -82,7 +80,7 @@ export default function Hero() {
         }}
       />
 
-      {/* Grid sutil (estática) */}
+      
       <div
         aria-hidden="true"
         className="pointer-events-none absolute inset-0 opacity-[0.10]"
