@@ -46,10 +46,18 @@ export default function Hero() {
           `,
         }}
         animate={{
+<<<<<<< HEAD
+=======
+        
+>>>>>>> 70efeb8 (cambio en el curriculum)
           opacity: [0.22, 0.55, 0.26],
           scaleX: [0.98, 1.03, 0.98],
           scaleY: [0.98, 1.02, 0.98],
           filter: ["blur(0px)", "blur(1.5px)", "blur(0px)"],
+<<<<<<< HEAD
+=======
+         
+>>>>>>> 70efeb8 (cambio en el curriculum)
           x: [0, 8, 0],
           y: [0, -6, 0],
         }}
@@ -60,7 +68,11 @@ export default function Hero() {
         }}
       />
 
+<<<<<<< HEAD
       
+=======
+        
+>>>>>>> 70efeb8 (cambio en el curriculum)
       <motion.div
         aria-hidden="true"
         className="pointer-events-none absolute inset-0 will-change-transform"
