@@ -13,7 +13,6 @@ export default function Hero() {
                  flex flex-col justify-center items-center text-center
                  bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950"
     >
-    
       <motion.div
         aria-hidden="true"
         className="pointer-events-none absolute inset-0 will-change-transform"
@@ -46,18 +45,10 @@ export default function Hero() {
           `,
         }}
         animate={{
-<<<<<<< HEAD
-=======
-        
->>>>>>> 70efeb8 (cambio en el curriculum)
           opacity: [0.22, 0.55, 0.26],
           scaleX: [0.98, 1.03, 0.98],
           scaleY: [0.98, 1.02, 0.98],
           filter: ["blur(0px)", "blur(1.5px)", "blur(0px)"],
-<<<<<<< HEAD
-=======
-         
->>>>>>> 70efeb8 (cambio en el curriculum)
           x: [0, 8, 0],
           y: [0, -6, 0],
         }}
@@ -68,11 +59,6 @@ export default function Hero() {
         }}
       />
 
-<<<<<<< HEAD
-      
-=======
-        
->>>>>>> 70efeb8 (cambio en el curriculum)
       <motion.div
         aria-hidden="true"
         className="pointer-events-none absolute inset-0 will-change-transform"
@@ -92,7 +78,6 @@ export default function Hero() {
         }}
       />
 
-      
       <div
         aria-hidden="true"
         className="pointer-events-none absolute inset-0 opacity-[0.10]"
@@ -164,8 +149,8 @@ export default function Hero() {
             {t("hero.viewProjects")} <ArrowRight size={18} />
           </a>
           <a
-            href="/Juan_Catena_CV.pdf"
-            download="Juan_Catena_CV.pdf"
+            href="/CV_Juan_Catena.pdf"
+            download="CV_Juan_Catena.pdf"
             className="border border-blue-400 px-6 py-3 rounded-2xl hover:bg-blue-500 hover:text-white transition"
           >
             {t("hero.downloadCV")}
